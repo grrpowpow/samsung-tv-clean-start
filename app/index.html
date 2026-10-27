@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mein TV · Clean Start</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="wallpaper" aria-hidden="true"></div>
+  <div class="shade" aria-hidden="true"></div>
+  <header>
+    <div><time id="clock">--:--</time><span id="date"></span></div>
+    <nav aria-label="Oberfläche">
+      <button id="photo" class="icon" aria-label="Hintergrundbild wählen">▧</button>
+      <button id="layout" class="icon" aria-label="Ansicht wechseln">▦</button>
+      <button id="settings" class="icon" aria-label="Einstellungen">⚙</button>
+    </nav>
+  </header>
+  <main>
+    <p class="eyebrow">DEIN ABEND. DEIN BILDSCHIRM.</p>
+    <h1>Einfach ankommen.</h1>
+    <section class="dock" aria-label="Meine Apps">
+      <button class="tile" data-app="stremio"><span class="mark">◈</span><span>Stremio</span></button>
+      <button class="tile" data-app="netflix"><span class="mark netflix">N</span><span>Netflix</span></button>
+      <button class="tile" data-app="disney"><span class="mark disney">D+</span><span>Disney+</span></button>
+      <button class="tile" data-app="youtube"><span class="mark play">▶</span><span>YouTube</span></button>
+      <button class="tile" data-app="apple"><span class="mark apple">tv+</span><span>Apple TV</span></button>
+      <button class="tile" data-app="prime"><span class="mark prime">prime</span><span>Prime Video</span></button>
+    </section>
+    <p id="notice" role="status" aria-live="polite">Lokale Vorschau · App-IDs noch nicht eingerichtet</p>
+  </main>
+  <footer><span>MEIN TV</span><span>← → Auswählen &nbsp; · &nbsp; OK Öffnen &nbsp; · &nbsp; ↑ Einstellungen</span></footer>
+  <section id="panel" role="dialog" aria-modal="true" aria-labelledby="panel-title" hidden>
+    <div class="panel-inner">
+      <p class="eyebrow">GANZ NACH DEINEM GESCHMACK</p>
+      <h2 id="panel-title">Dein Startbildschirm</h2>
+      <p>Wähle ein eigenes Foto. Die Vorschau speichert es ausschließlich in diesem Browser.</p>
+      <div class="actions">
+        <button id="choose-photo">Eigenes Foto wählen</button>
+        <button id="reset-photo">Standardhintergrund</button>
+        <button id="toggle-title">Begrüßung ein-/ausblenden</button>
+      </div>
+      <p class="small">Die App-Kacheln sind eine Vorschau. Installierte Apps und ihre Tizen-IDs müssen auf deinem Fernseher geprüft werden.</p>
+      <button id="close-panel">Zurück zum Startbildschirm</button>
+    </div>
+  </section>
+  <input id="photo-file" type="file" accept="image/*" hidden>
+  <script src="main.js"></script>
+</body>
+</html>

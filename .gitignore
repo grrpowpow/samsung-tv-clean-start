@@ -1,0 +1,12 @@
+.local/
+recovery/
+backups/
+*.log
+*.p12
+*.pfx
+*.pem
+*.key
+*.wgt
+node_modules/
+dist/
+.DS_Store
